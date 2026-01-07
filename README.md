@@ -3,60 +3,67 @@
 
 **ATS Resume Checker** is a web-based tool that allows users to upload their resumes (PDF) and compare them against a job description to get an **instant match score**. This helps job seekers optimize their resumes for Applicant Tracking Systems (ATS).
 
-⚡ Features
-----------
+## ⚡ Features
 
-*   Upload **PDF resumes** and parse text automatically
-    
-*   Paste any **job description** for comparison
-    
-*   Calculate **ATS match score** based on skills/keywords
-    
-*   Highlights **matched** and **missing keywords**
-    
-*   Handles **malformed PDFs gracefully**
+* **PDF Parsing:** Upload PDF resumes and parse text automatically.
+* **Job Comparison:** Paste any job description for comparison.
+* **Match Scoring:** Calculate ATS match score based on skills and keywords.
+* **Keyword Insights:** Highlights matched and missing keywords.
+* **Error Handling:** Handles malformed PDFs gracefully.
     
 
-🛠️ Tech Stack
---------------
+## 🛠️ Tech Stack
 
-*   **Frontend:** Next.js 13+, React, TypeScript, Tailwind CSS
-    
-*   **Backend:** Next.js API routes (serverless functions)
-    
-*   **PDF Parsing:** @cedrugs/pdf-parse
-    
-*   **Icons:** lucide-react
+* **Frontend:** Next.js 13+, React, TypeScript, Tailwind CSS
+* **Backend:** Next.js API routes (Serverless Functions)
+* **PDF Parsing:** `@cedrugs/pdf-parse`
+* **Icons:** `lucide-react`
     
 
-📦 Project Structure
---------------------
+## 📦 Project Structure
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   app/   ├─ api/   │   └─ extract-pdf/      # PDF parsing API   ├─ ats-checker/          # Main ATS checker page   │   └─ page.tsx   └─ page.tsx              # Landing page  components/   ├─ PdfUploader.tsx   ├─ JobDescriptionInput.tsx   └─ MatchScoreCard.tsx  utils/   ├─ extractPdfText.ts   └─ calculateAtsScore.ts   `
+```text
+app/
+ ├─ api/
+ │   └─ extract-pdf/      # PDF parsing API
+ ├─ ats-checker/          # Main ATS checker page
+ │   └─ page.tsx
+ └─ page.tsx              # Landing page
+components/
+ ├─ PdfUploader.tsx
+ ├─ JobDescriptionInput.tsx
+ └─ MatchScoreCard.tsx
+utils/
+ ├─ extractPdfText.ts
+ └─ calculateAtsScore.ts
 
-⚙️ Setup Instructions
+```
+
+## ⚙️ Setup Instructions
 ---------------------
 
 1.  **Clone the repo**
     
+```bash
+  git clone   cd ats-resume-checker   
+```
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   git clone   cd ats-resume-checker   `
+2.  **Install dependencies**
+```bash
+    npm install   
+```
 
-1.  **Install dependencies**
+3.  **Run the development server**
+    
+```bash   
+    npm run dev   
+```
+
+4.  Open [http://localhost:3000](http://localhost:3000/) in your browser
     
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   npm install   `
-
-1.  **Run the development server**
-    
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   npm run dev   `
-
-1.  Open [http://localhost:3000](http://localhost:3000/) in your browser
-    
-
-🖥️ How to Use
---------------
+## 🖥️ How to Use
+---------------------
 
 1.  Navigate to the **ATS Checker** page
     
@@ -71,16 +78,18 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 
 > Tip: Use **text-based PDFs** for accurate results. Scanned image PDFs may fail.
 
-💡 Example
+## 💡 Example
 ----------
 
 **Job Description:**
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   We are looking for a Frontend Developer with strong experience in React, Next.js, TypeScript, and Tailwind CSS. Experience with REST APIs and Git is required.   `
+```text
+   We are looking for a Frontend Developer with strong experience in React, Next.js, TypeScript, and Tailwind CSS. Experience with REST APIs and Git is required.   
+```
 
 **Resume Keywords Matched:** react, next, typescript, tailwind, rest, git**Score:** 75%
 
-🏗️ Contributing
+## 🏗️ Contributing
 ----------------
 
 1.  Fork the repository
@@ -94,12 +103,12 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 5.  Open a Pull Request
     
 
-📄 License
+## 📄 License
 ----------
 
 This project is licensed under the **MIT License**.
 
-🚀 Future Improvements
+## 🚀 Future Improvements
 ----------------------
 
 *   Keyword weighting (important skills score higher)
