@@ -10,14 +10,34 @@ export async function POST(req: Request) {
     }
 
     const buffer = Buffer.from(await file.arrayBuffer());
-    const data = await pdf(buffer);
+
+    let data;
+    try {
+      data = await pdf(buffer, {
+        max: 0, // parse all pages
+      });
+    } catch (pdfError: any) {
+      console.error('PDF parse error:', pdfError);
+
+      return Response.json(
+        {
+          error: 'Unsupported or corrupted PDF file',
+          details: pdfError.message,
+        },
+        { status: 422 }
+      );
+    }
 
     return Response.json({
       text: data.text,
       pages: data.numpages,
     });
+
   } catch (error) {
-    console.error('PDF parse failed:', error);
-    return Response.json({ error: 'PDF parsing failed' }, { status: 500 });
+    console.error('Server error:', error);
+    return Response.json(
+      { error: 'Internal server error' },
+      { status: 500 }
+    );
   }
 }
