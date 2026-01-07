@@ -25,10 +25,10 @@
 ```text
 app/
  ├─ api/
- │   └─ extract-pdf/      # PDF parsing API
- ├─ ats-checker/          # Main ATS checker page
+ │   └─ extract-pdf/      
+ ├─ ats-checker/         
  │   └─ page.tsx
- └─ page.tsx              # Landing page
+ └─ page.tsx              
 components/
  ├─ PdfUploader.tsx
  ├─ JobDescriptionInput.tsx
@@ -40,7 +40,6 @@ utils/
 ```
 
 ## ⚙️ Setup Instructions
----------------------
 
 1.  **Clone the repo**
     
@@ -63,7 +62,7 @@ utils/
     
 
 ## 🖥️ How to Use
----------------------
+
 
 1.  Navigate to the **ATS Checker** page
     
@@ -79,7 +78,7 @@ utils/
 > Tip: Use **text-based PDFs** for accurate results. Scanned image PDFs may fail.
 
 ## 💡 Example
-----------
+
 
 **Job Description:**
 
@@ -90,31 +89,22 @@ utils/
 **Resume Keywords Matched:** react, next, typescript, tailwind, rest, git**Score:** 75%
 
 ## 🏗️ Contributing
-----------------
 
 1.  Fork the repository
-    
 2.  Create a branch (git checkout -b feature/my-feature)
-    
-3.  Make changes and commit (git commit -m "feat: add new feature")
-    
+3.  Make changes and commit (git commit -m "feat: add new feature") 
 4.  Push to the branch (git push origin feature/my-feature)
-    
 5.  Open a Pull Request
     
 
 ## 📄 License
-----------
 
 This project is licensed under the **MIT License**.
 
+
 ## 🚀 Future Improvements
-----------------------
 
 *   Keyword weighting (important skills score higher)
-    
 *   OCR fallback for scanned/image PDFs
-    
 *   User authentication & saved history
-    
 *   Paid plan / limits for premium users
